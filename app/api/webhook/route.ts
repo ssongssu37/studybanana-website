@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
         is_premium: isActive,
         plan: isActive ? plan : 'free',
         stripe_subscription_id: sub.id,
-        subscription_end_date: new Date(sub.current_period_end * 1000).toISOString(),
+        subscription_end_date: new Date((sub as any).current_period_end * 1000).toISOString(),
       })
       break
     }
