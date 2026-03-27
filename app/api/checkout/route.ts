@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
       }
     } else {
       // Guest checkout — Stripe collects email, webhook links it later
-      sessionParams.customer_creation = 'always'
+      if (isLifetime) sessionParams.customer_creation = 'always'
       if (email) sessionParams.customer_email = email
     }
 
