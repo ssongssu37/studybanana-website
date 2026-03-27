@@ -257,7 +257,7 @@ export default function StudyBananaLandingPage() {
             <span className="text-2xl">🛡️</span>
             <div className="text-left">
               <p className="text-sm font-semibold text-green-800">30-Day Money-Back Guarantee</p>
-              <p className="text-sm text-green-700">If StudyBanana doesn't help your kid focus, we'll refund every cent. No questions asked.</p>
+              <p className="text-sm text-green-700">StudyBanana will get your kid focused. If it doesn't, we'll refund every cent. No questions asked.</p>
             </div>
           </div>
         </div>
@@ -297,14 +297,60 @@ export default function StudyBananaLandingPage() {
         </div>
 
         {/* Social proof testimonials */}
-        <div className="mt-20 grid grid-cols-1 gap-4 sm:grid-cols-3 text-left">
+        <div className="mt-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">What parents are saying</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Finally, something that actually works.</h2>
+        </div>
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 text-left">
           {[
-            { quote: "My daughter went from fighting me every night to just… sitting down and doing it. I didn't change anything except the app.", name: "Rachel M.", role: "Mom of 2" },
-            { quote: "The parental lock is genius. He used to close everything the second I left the room. Now he literally can't.", name: "David K.", role: "Dad of a 10-year-old" },
-            { quote: "I was skeptical — he's tried every app. But the retro TV look hooked him. He actually thinks it's cool to use it.", name: "Priya S.", role: "Parent" },
+            {
+              quote: "My daughter went from fighting me every night to just… sitting down and doing it. I didn't change anything except the app.",
+              name: "Rachel M.",
+              role: "Mom of 2",
+            },
+            {
+              quote: "The parental lock is genius. He used to close everything the second I left the room. Now he literally can't.",
+              name: "David K.",
+              role: "Dad of a 10-year-old",
+            },
+            {
+              quote: "I was skeptical — he's tried every app. But the retro TV look hooked him. He actually thinks it's cool to use it.",
+              name: "Priya S.",
+              role: "Parent",
+            },
+            {
+              quote: "I work from home and can't stand over him all day. This app does it for me. He's locked in, I'm locked in, everyone's happy.",
+              name: "James T.",
+              role: "Dad, works from home",
+            },
+            {
+              quote: "We tried screen time limits, parental controls, taking the computer away. Nothing stuck. This is the first thing that did.",
+              name: "Michelle O.",
+              role: "Mom of 3",
+            },
+            {
+              quote: "My son has ADHD and the Pomodoro timer changed everything. Short bursts, real breaks. He doesn't even fight it anymore.",
+              name: "Tanya R.",
+              role: "Mom of an 11-year-old",
+            },
+            {
+              quote: "He asked me to turn it on himself last Tuesday. I nearly fell off my chair.",
+              name: "Chris L.",
+              role: "Dad",
+            },
+            {
+              quote: "The AI homework helper alone is worth it. No more 'I don't get it' at 10pm when I'm exhausted.",
+              name: "Sofia B.",
+              role: "Single mom",
+            },
+            {
+              quote: "Set it up in 5 minutes. My daughter's been using it every day for 3 weeks. Homework is just… done now.",
+              name: "Aaron W.",
+              role: "Parent",
+            },
           ].map((t) => (
             <div key={t.name} className="rounded-2xl border border-black/8 bg-white p-6 shadow-sm">
-              <div className="mb-3 flex gap-0.5 text-[#f5a623]">{'★★★★★'.split('').map((s,i)=><span key={i}>{s}</span>)}</div>
+              <div className="mb-3 flex gap-0.5 text-[#f5a623]">{'★★★★★'.split('').map((s, i) => <span key={i}>{s}</span>)}</div>
               <p className="text-sm leading-relaxed text-black/70 italic">"{t.quote}"</p>
               <div className="mt-4 text-sm font-semibold text-[#2a241f]">{t.name}</div>
               <div className="text-xs text-black/40">{t.role}</div>
