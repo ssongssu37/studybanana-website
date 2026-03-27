@@ -147,7 +147,7 @@ export default function StudyBananaLandingPage() {
         {/* Pricing — BEFORE features */}
         <div className="mt-24" id="pricing">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Pricing</p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Simple, honest pricing</h2>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Your evenings back. Starting at $0.</h2>
           <p className="mx-auto mt-3 max-w-xl text-base text-black/55">Start free. Try premium free for 7 days — no charge until after the trial.</p>
 
           {/* Monthly / Annual toggle */}
