@@ -8,6 +8,7 @@ export default function StudyBananaLandingPage() {
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState<string | null>(null)
   const [lifetimeLeft, setLifetimeLeft] = useState(100)
+  const [billingAnnual, setBillingAnnual] = useState(false)
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data }) => setUser(data.user))
@@ -25,13 +26,14 @@ export default function StudyBananaLandingPage() {
     if (data.url) window.location.href = data.url
     else { alert(data.error || 'Something went wrong'); setLoading(null) }
   }
+
   const features: Feature[] = [
     { icon: '🔒', title: 'Parental Lock', desc: 'Set a PIN and kids are locked in fullscreen — they can\'t switch apps, close the window, or get distracted.', highlight: true },
     { icon: '🎵', title: 'Focus Music', desc: '20 hand-picked ambient, jazz, and lo-fi tracks to keep you in the zone.' },
-    { icon: '🤖', title: 'AI Assistant', desc: 'Ask anything. Get instant help with homework, essays, and tough concepts.' },
+    { icon: '🤖', title: 'AI Study Helper', desc: 'Ask anything. Get instant help with homework, essays, and tough concepts.' },
     { icon: '⏱️', title: 'Pomodoro Timer', desc: '25/5 focus cycles built-in. Work smarter, not longer.' },
     { icon: '📝', title: 'Notes', desc: 'A distraction-free notepad, always one click away.' },
-    { icon: '📚', title: 'Kids Encyclopedia', desc: '64 topics across 8 subjects. Learn while you work.' },
+    { icon: '🌤️', title: 'Weather & Clock', desc: 'Live clock, date, and weather — everything kids need without opening a browser.' },
   ]
 
   return (
@@ -55,30 +57,31 @@ export default function StudyBananaLandingPage() {
         </div>
       </nav>
 
-      {/* Hero */}
       <main className="mx-auto max-w-5xl px-6 pb-24 pt-12 text-center">
+
+        {/* Hero */}
         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#ffd54f]/60 bg-[#ffd54f]/20 px-4 py-1.5 text-sm font-medium text-[#7a5c00]">
           🍌 Free to download · Mac &amp; Windows
         </div>
 
-        <h1 className="mx-auto max-w-3xl text-5xl font-semibold leading-tight tracking-tight md:text-6xl">
-          Turn your computer into a{' '}
+        <h1 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+          You handed your kid a computer to study.{' '}
           <span className="relative inline-block">
-            <span className="relative z-10">distraction-free</span>
-            <span className="absolute inset-x-0 bottom-1 z-0 h-3 rounded bg-[#ffd54f]/50" />
+            <span className="relative z-10">Three hours later</span>
+            <span className="absolute inset-x-0 bottom-1 z-0 h-3 rounded bg-[#ffd54f]/60" />
           </span>{' '}
-          study space.
+          they're three hours deep into games and videos.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/60">
-          Music, timer, AI help, and notes — all in one immersive fullscreen app.
-          No browser tabs, no notifications. Just focus.
+          StudyBanana locks the computer down to one thing — studying.
+          Music, a focus timer, AI homework help, and notes. Nothing else gets in.
         </p>
 
         {/* Download buttons */}
         <div id="download" className="mt-8 flex flex-wrap justify-center gap-3">
           <a
-            href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.2/StudyBanana-1.0.0.dmg"
+            href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana-1.0.0.dmg"
             className="flex items-center gap-2 rounded-full bg-[#2a241f] px-7 py-3 text-base font-medium text-white shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -87,7 +90,7 @@ export default function StudyBananaLandingPage() {
             Download for Mac
           </a>
           <a
-            href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.2/StudyBanana.Setup.1.0.0.exe"
+            href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana.Setup.1.0.0.exe"
             className="flex items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 text-base font-medium text-[#2a241f] shadow-sm transition hover:bg-black/[0.03]"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -98,27 +101,41 @@ export default function StudyBananaLandingPage() {
         </div>
         <p className="mt-3 text-sm text-black/40">Free · No account needed · Works offline</p>
 
-        {/* Screenshot in iMac frame */}
+        {/* Screenshot */}
         <div className="mt-14 flex justify-center">
           <div className="w-full max-w-3xl">
             <img src="/appleTV.png" alt="StudyBanana app on iMac" className="w-full drop-shadow-2xl" />
           </div>
         </div>
 
-        {/* Pricing */}
+        {/* Pricing — BEFORE features */}
         <div className="mt-24" id="pricing">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Pricing</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Simple, honest pricing</h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">Start free. Upgrade when you're ready.</p>
+          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">Start free. Try premium free for 7 days — no charge until after the trial.</p>
 
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          {/* Monthly / Annual toggle */}
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <span className={`text-sm font-medium ${!billingAnnual ? 'text-[#2a241f]' : 'text-black/40'}`}>Monthly</span>
+            <button
+              onClick={() => setBillingAnnual(v => !v)}
+              className={`relative h-7 w-12 rounded-full transition-colors ${billingAnnual ? 'bg-[#2a241f]' : 'bg-black/20'}`}
+            >
+              <span className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-all ${billingAnnual ? 'left-6' : 'left-1'}`} />
+            </button>
+            <span className={`text-sm font-medium ${billingAnnual ? 'text-[#2a241f]' : 'text-black/40'}`}>
+              Annual <span className="ml-1 rounded-full bg-green-100 px-2 py-0.5 text-xs font-bold text-green-700">Save $11</span>
+            </span>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-3">
             {/* Free */}
             <div className="rounded-2xl border border-black/8 bg-white p-7 text-left shadow-sm">
               <div className="text-xs font-bold uppercase tracking-widest text-black/30 mb-3">Free</div>
               <div className="text-4xl font-bold">$0</div>
               <div className="text-sm text-black/40 mt-1 mb-6">forever</div>
               <ul className="space-y-2 text-sm text-black/60 mb-8">
-                {['Clock & Notes','Pomodoro timer','Weather channel','3 free music tracks','20 AI questions/day','2 themes (Daylight Amber + Linen)','Offline access','Parental lock 🔒'].map(f=>(
+                {['Clock, Notes & Weather','Pomodoro timer','3 free music tracks','20 AI questions/day','Parental lock 🔒','2 themes','Offline access'].map(f => (
                   <li key={f} className="flex gap-2"><span className="text-green-500">✓</span>{f}</li>
                 ))}
               </ul>
@@ -131,26 +148,46 @@ export default function StudyBananaLandingPage() {
             <div className="rounded-2xl bg-[#2a241f] text-white p-7 text-left shadow-xl relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ffd54f] text-[#2a241f] text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">MOST POPULAR</div>
               <div className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3">Premium</div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-bold line-through text-red-400">$10</span>
-                <span className="text-4xl font-bold">$5<span className="text-lg font-normal text-white/50">/mo</span></span>
+
+              {billingAnnual ? (
+                <>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold line-through text-red-400 opacity-70">$98</span>
+                    <span className="text-4xl font-bold">$49<span className="text-lg font-normal text-white/50">/yr</span></span>
+                  </div>
+                  <div className="text-sm text-white/40 mt-1 mb-2">that's $4.08/month</div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold line-through text-red-400 opacity-70">$10</span>
+                    <span className="text-4xl font-bold">$5<span className="text-lg font-normal text-white/50">/mo</span></span>
+                  </div>
+                  <div className="text-sm text-white/40 mt-1 mb-2">or switch to annual &amp; save $11</div>
+                </>
+              )}
+
+              <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-[#ffd54f]">
+                ✦ 7-day free trial — cancel anytime
               </div>
-              <div className="text-sm text-white/40 mt-1 mb-6">or <span className="line-through text-red-400">$98</span> $49/year — save $49</div>
+
               <ul className="space-y-2 text-sm text-white/70 mb-6">
-                {['Everything in Free','AI Study Helper','20 music tracks','Kids encyclopedia','All 10 themes'].map(f=>(
+                {['Everything in Free','Unlimited AI questions','All 20 music tracks','All 10 themes','Kids encyclopedia'].map(f => (
                   <li key={f} className="flex gap-2"><span className="text-[#ffd54f]">✓</span>{f}</li>
                 ))}
               </ul>
-              <div className="flex flex-col gap-2">
-                <button onClick={() => handleCheckout('price_1TFMWKCDDRCjONFZueHxhQtJ','monthly')} disabled={!!loading}
-                  className="rounded-full bg-[#ffd54f] text-[#2a241f] py-2.5 text-sm font-bold hover:bg-yellow-300 transition disabled:opacity-50">
-                  {loading==='monthly' ? 'Loading…' : 'Monthly — $5/mo'}
-                </button>
-                <button onClick={() => handleCheckout('price_1TFPBECDDRCjONFZBZNEJGow','annual')} disabled={!!loading}
-                  className="rounded-full border border-white/20 py-2.5 text-sm font-medium hover:bg-white/10 transition disabled:opacity-50">
-                  {loading==='annual' ? 'Loading…' : 'Annual — $49/yr'}
-                </button>
-              </div>
+
+              <button
+                onClick={() => handleCheckout(
+                  billingAnnual ? 'price_1TFPBECDDRCjONFZBZNEJGow' : 'price_1TFMWKCDDRCjONFZueHxhQtJ',
+                  billingAnnual ? 'annual' : 'monthly'
+                )}
+                disabled={!!loading}
+                className="w-full rounded-full bg-[#ffd54f] text-[#2a241f] py-3 text-sm font-bold hover:bg-yellow-300 transition disabled:opacity-50"
+              >
+                {loading === 'monthly' || loading === 'annual' ? 'Loading…' : 'Start Free 7-Day Trial'}
+              </button>
+              <p className="mt-2 text-center text-xs text-white/30">No charge for 7 days. Cancel anytime.</p>
             </div>
 
             {/* Lifetime */}
@@ -160,41 +197,39 @@ export default function StudyBananaLandingPage() {
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-black/30 mb-3">Lifetime</div>
               <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-bold line-through text-red-500">$200</span>
+                <span className="text-4xl font-bold line-through text-red-500 opacity-70">$200</span>
                 <span className="text-4xl font-bold">$99</span>
               </div>
-              <div className="text-sm text-black/40 mt-1 mb-6">one-time · early bird only</div>
+              <div className="text-sm text-black/40 mt-1 mb-6">one-time · pay once, own forever</div>
               <ul className="space-y-2 text-sm text-black/60 mb-8">
-                {['Everything in Premium','Pay once, use forever','All future updates','Priority support'].map(f=>(
+                {['Everything in Premium','Pay once, use forever','All future updates','Priority support'].map(f => (
                   <li key={f} className="flex gap-2"><span className="text-green-500">✓</span>{f}</li>
                 ))}
               </ul>
-              <button onClick={() => handleCheckout('price_1TFPBICDDRCjONFZd54Y5IQj','lifetime')} disabled={!!loading}
-                className="w-full rounded-full bg-[#2a241f] text-white py-2.5 text-sm font-bold hover:bg-black/80 transition disabled:opacity-50">
-                {loading==='lifetime' ? 'Loading…' : 'Get Lifetime Access'}
+              <button
+                onClick={() => handleCheckout('price_1TFPBICDDRCjONFZd54Y5IQj', 'lifetime')}
+                disabled={!!loading}
+                className="w-full rounded-full bg-[#2a241f] text-white py-2.5 text-sm font-bold hover:bg-black/80 transition disabled:opacity-50"
+              >
+                {loading === 'lifetime' ? 'Loading…' : 'Get Lifetime Access'}
               </button>
             </div>
           </div>
         </div>
 
-        {/* Features */}
+        {/* Features — AFTER pricing */}
         <div className="mt-24">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Everything you need</p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
-            One app. No distractions.
-          </h2>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">One app. No distractions.</h2>
           <p className="mx-auto mt-3 max-w-xl text-base text-black/55">
             StudyBanana replaces your whole desktop with a focused study environment.
           </p>
-
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {features.map((f) => (
               <div
                 key={f.title}
                 className={`rounded-2xl border p-6 text-left shadow-sm transition hover:shadow-md ${
-                  f.highlight
-                    ? 'border-[#2a241f]/20 bg-[#2a241f] text-white'
-                    : 'border-black/6 bg-white'
+                  f.highlight ? 'border-[#2a241f]/20 bg-[#2a241f] text-white' : 'border-black/6 bg-white'
                 }`}
               >
                 <div className={`mb-3 flex h-11 w-11 items-center justify-center rounded-xl text-2xl ${
@@ -219,15 +254,17 @@ export default function StudyBananaLandingPage() {
         {/* Bottom CTA */}
         <div className="mt-24 rounded-3xl bg-[#2a241f] px-8 py-14 text-white">
           <div className="mb-3 text-3xl">🍌</div>
-          <h2 className="text-3xl font-semibold tracking-tight">Ready to focus?</h2>
+          <h2 className="text-3xl font-semibold tracking-tight">Give your kid a screen worth using.</h2>
           <p className="mx-auto mt-3 max-w-md text-base text-white/60">
-            Download StudyBanana free and start your first focused study session today.
+            Download free today. Try premium free for 7 days.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.2/StudyBanana-1.0.0.dmg" className="rounded-full bg-[#ffd54f] px-7 py-3 text-base font-semibold text-[#2a241f] transition hover:-translate-y-0.5">
+            <a href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana-1.0.0.dmg"
+              className="rounded-full bg-[#ffd54f] px-7 py-3 text-base font-semibold text-[#2a241f] transition hover:-translate-y-0.5">
               Download for Mac
             </a>
-            <a href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.2/StudyBanana.Setup.1.0.0.exe" className="rounded-full border border-white/20 px-7 py-3 text-base font-medium text-white transition hover:bg-white/10">
+            <a href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana.Setup.1.0.0.exe"
+              className="rounded-full border border-white/20 px-7 py-3 text-base font-medium text-white transition hover:bg-white/10">
               Download for Windows
             </a>
           </div>

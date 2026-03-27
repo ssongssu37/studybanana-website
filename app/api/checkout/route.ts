@@ -15,6 +15,7 @@ export async function POST(req: NextRequest) {
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: 1 }],
       mode: isLifetime ? 'payment' : 'subscription',
+      ...(isLifetime ? {} : { subscription_data: { trial_period_days: 7 } }),
       success_url: `${process.env.NEXT_PUBLIC_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL}/#pricing`,
       metadata: { userId: userId || '', priceId },
