@@ -15,12 +15,11 @@ export default function StudyBananaLandingPage() {
   }, [])
 
   async function handleCheckout(priceId: string, label: string) {
-    if (!user) { window.location.href = '/auth?next=%23pricing'; return }
     setLoading(label)
     const res = await fetch('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ priceId, email: user.email, userId: user.id }),
+      body: JSON.stringify({ priceId, email: user?.email || null, userId: user?.id || null }),
     })
     const data = await res.json()
     if (data.url) window.location.href = data.url
