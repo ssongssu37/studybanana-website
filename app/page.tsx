@@ -79,7 +79,7 @@ export default function StudyBananaLandingPage() {
         {/* Download buttons */}
         <div id="download" className="mt-8 flex flex-wrap justify-center gap-3">
           <a
-            href="#"
+            href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.0/StudyBanana-1.0.0.dmg"
             className="flex items-center gap-2 rounded-full bg-[#2a241f] px-7 py-3 text-base font-medium text-white shadow-lg shadow-black/10 transition hover:-translate-y-0.5"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -88,7 +88,7 @@ export default function StudyBananaLandingPage() {
             Download for Mac
           </a>
           <a
-            href="#"
+            href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.0/StudyBanana.Setup.1.0.0.exe"
             className="flex items-center gap-2 rounded-full border border-black/10 bg-white px-7 py-3 text-base font-medium text-[#2a241f] shadow-sm transition hover:bg-black/[0.03]"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
@@ -219,10 +219,10 @@ export default function StudyBananaLandingPage() {
             Download StudyBanana free and start your first focused study session today.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a href="#" className="rounded-full bg-[#ffd54f] px-7 py-3 text-base font-semibold text-[#2a241f] transition hover:-translate-y-0.5">
+            <a href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.0/StudyBanana-1.0.0.dmg" className="rounded-full bg-[#ffd54f] px-7 py-3 text-base font-semibold text-[#2a241f] transition hover:-translate-y-0.5">
               Download for Mac
             </a>
-            <a href="#" className="rounded-full border border-white/20 px-7 py-3 text-base font-medium text-white transition hover:bg-white/10">
+            <a href="https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.0/StudyBanana.Setup.1.0.0.exe" className="rounded-full border border-white/20 px-7 py-3 text-base font-medium text-white transition hover:bg-white/10">
               Download for Windows
             </a>
           </div>
