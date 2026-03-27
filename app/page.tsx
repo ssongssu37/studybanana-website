@@ -131,8 +131,11 @@ export default function StudyBananaLandingPage() {
             <div className="rounded-2xl bg-[#2a241f] text-white p-7 text-left shadow-xl relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ffd54f] text-[#2a241f] text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">MOST POPULAR</div>
               <div className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3">Premium</div>
-              <div className="text-4xl font-bold">$5<span className="text-lg font-normal text-white/50">/mo</span></div>
-              <div className="text-sm text-white/40 mt-1 mb-6">or $49/year — save $11</div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-lg line-through text-red-400">$10</span>
+                <span className="text-4xl font-bold">$5<span className="text-lg font-normal text-white/50">/mo</span></span>
+              </div>
+              <div className="text-sm text-white/40 mt-1 mb-6">or <span className="line-through text-red-400">$98</span> $49/year — save $49</div>
               <ul className="space-y-2 text-sm text-white/70 mb-6">
                 {['Everything in Free','AI Study Helper','20 music tracks','Kids encyclopedia','All 10 themes'].map(f=>(
                   <li key={f} className="flex gap-2"><span className="text-[#ffd54f]">✓</span>{f}</li>
@@ -156,7 +159,10 @@ export default function StudyBananaLandingPage() {
                 🔥 Limited Time Offer
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-black/30 mb-3">Lifetime</div>
-              <div className="text-4xl font-bold">$99</div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-lg line-through text-red-500">$198</span>
+                <span className="text-4xl font-bold">$99</span>
+              </div>
               <div className="text-sm text-black/40 mt-1 mb-6">one-time · early bird only</div>
               <ul className="space-y-2 text-sm text-black/60 mb-8">
                 {['Everything in Premium','Pay once, use forever','All future updates','Priority support'].map(f=>(
