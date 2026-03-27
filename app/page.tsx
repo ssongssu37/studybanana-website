@@ -92,17 +92,15 @@ export default function StudyBananaLandingPage() {
         </div>
 
         <h1 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-          You handed your kid a computer to study.{' '}
+          One homework tab. Six YouTube tabs.{' '}
           <span className="relative inline-block">
-            <span className="relative z-10">Three hours later</span>
+            <span className="relative z-10">They didn't even close them.</span>
             <span className="absolute inset-x-0 bottom-1 z-0 h-3 rounded bg-[#ffd54f]/60" />
-          </span>{' '}
-          they're three hours deep into games and videos.
+          </span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/60">
-          StudyBanana turns their computer into a focused study zone — so homework actually gets done,
-          and you stop spending every evening fighting about screen time.
+          One screen. Study mode. Homework done. Evenings back.
         </p>
 
         {/* Download buttons */}
