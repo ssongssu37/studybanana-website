@@ -92,15 +92,16 @@ export default function StudyBananaLandingPage() {
         </div>
 
         <h1 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-          One homework tab. Six YouTube tabs.{' '}
+          One screen. Study mode.{' '}
           <span className="relative inline-block">
-            <span className="relative z-10">They didn't even close them.</span>
+            <span className="relative z-10">Homework done.</span>
             <span className="absolute inset-x-0 bottom-1 z-0 h-3 rounded bg-[#ffd54f]/60" />
-          </span>
+          </span>{' '}
+          Evenings back.
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/60">
-          One screen. Study mode. Homework done. Evenings back.
+          One homework tab. Six YouTube tabs. They didn't even close them. StudyBanana fixes that.
         </p>
 
         {/* Download buttons */}
