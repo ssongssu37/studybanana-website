@@ -106,45 +106,6 @@ export default function StudyBananaLandingPage() {
           </div>
         </div>
 
-        {/* Features */}
-        <div className="mt-24">
-          <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Everything you need</p>
-          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
-            One app. No distractions.
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">
-            StudyBanana replaces your whole desktop with a focused study environment.
-          </p>
-
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {features.map((f) => (
-              <div
-                key={f.title}
-                className={`rounded-2xl border p-6 text-left shadow-sm transition hover:shadow-md ${
-                  f.highlight
-                    ? 'border-[#2a241f]/20 bg-[#2a241f] text-white'
-                    : 'border-black/6 bg-white'
-                }`}
-              >
-                <div className={`mb-3 flex h-11 w-11 items-center justify-center rounded-xl text-2xl ${
-                  f.highlight ? 'bg-white/15' : 'bg-[#ffd54f]/30'
-                }`}>
-                  {f.icon}
-                </div>
-                <div className="font-semibold">{f.title}</div>
-                <div className={`mt-1 text-sm leading-relaxed ${f.highlight ? 'text-white/65' : 'text-black/55'}`}>
-                  {f.desc}
-                </div>
-                {f.highlight && (
-                  <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-[#ffd54f] px-3 py-1 text-xs font-semibold text-[#2a241f]">
-                    ⭐ Parent favourite
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Pricing */}
         <div className="mt-24" id="pricing">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Pricing</p>
@@ -208,6 +169,45 @@ export default function StudyBananaLandingPage() {
                 {loading==='lifetime' ? 'Loading…' : 'Get Lifetime Access'}
               </button>
             </div>
+          </div>
+        </div>
+
+        {/* Features */}
+        <div className="mt-24">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Everything you need</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+            One app. No distractions.
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">
+            StudyBanana replaces your whole desktop with a focused study environment.
+          </p>
+
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {features.map((f) => (
+              <div
+                key={f.title}
+                className={`rounded-2xl border p-6 text-left shadow-sm transition hover:shadow-md ${
+                  f.highlight
+                    ? 'border-[#2a241f]/20 bg-[#2a241f] text-white'
+                    : 'border-black/6 bg-white'
+                }`}
+              >
+                <div className={`mb-3 flex h-11 w-11 items-center justify-center rounded-xl text-2xl ${
+                  f.highlight ? 'bg-white/15' : 'bg-[#ffd54f]/30'
+                }`}>
+                  {f.icon}
+                </div>
+                <div className="font-semibold">{f.title}</div>
+                <div className={`mt-1 text-sm leading-relaxed ${f.highlight ? 'text-white/65' : 'text-black/55'}`}>
+                  {f.desc}
+                </div>
+                {f.highlight && (
+                  <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-[#ffd54f] px-3 py-1 text-xs font-semibold text-[#2a241f]">
+                    ⭐ Parent favourite
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
