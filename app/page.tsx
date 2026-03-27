@@ -158,7 +158,7 @@ export default function StudyBananaLandingPage() {
               <div className="text-4xl font-bold">$0</div>
               <div className="text-sm text-black/40 mt-1 mb-6">forever</div>
               <ul className="space-y-2 text-sm text-black/60 mb-8">
-                {['Clock & Notes','Pomodoro timer','3 themes','Offline access','Parental lock 🔒'].map(f=>(
+                {['Clock & Notes','Pomodoro timer','Daylight Amber theme','Offline access','Parental lock 🔒'].map(f=>(
                   <li key={f} className="flex gap-2"><span className="text-green-500">✓</span>{f}</li>
                 ))}
               </ul>
