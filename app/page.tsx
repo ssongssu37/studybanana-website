@@ -101,7 +101,7 @@ export default function StudyBananaLandingPage() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/60">
-          One homework tab. Six YouTube tabs. They didn't even close them. StudyBanana fixes that.
+          A focused study app for kids. Free to download on Mac and Windows.
         </p>
 
         {/* Download buttons */}
