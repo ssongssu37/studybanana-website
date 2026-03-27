@@ -132,7 +132,7 @@ export default function StudyBananaLandingPage() {
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ffd54f] text-[#2a241f] text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">MOST POPULAR</div>
               <div className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3">Premium</div>
               <div className="text-4xl font-bold">$5<span className="text-lg font-normal text-white/50">/mo</span></div>
-              <div className="text-sm text-white/40 mt-1 mb-6">or $50/year — save $10</div>
+              <div className="text-sm text-white/40 mt-1 mb-6">or $49/year — save $11</div>
               <ul className="space-y-2 text-sm text-white/70 mb-6">
                 {['Everything in Free','AI Study Helper','20 music tracks','Kids encyclopedia','All 10 themes'].map(f=>(
                   <li key={f} className="flex gap-2"><span className="text-[#ffd54f]">✓</span>{f}</li>
@@ -143,9 +143,9 @@ export default function StudyBananaLandingPage() {
                   className="rounded-full bg-[#ffd54f] text-[#2a241f] py-2.5 text-sm font-bold hover:bg-yellow-300 transition disabled:opacity-50">
                   {loading==='monthly' ? 'Loading…' : 'Monthly — $5/mo'}
                 </button>
-                <button onClick={() => handleCheckout('price_1TFMWLCDDRCjONFZ6FqHGz6y','annual')} disabled={!!loading}
+                <button onClick={() => handleCheckout('price_1TFPBECDDRCjONFZBZNEJGow','annual')} disabled={!!loading}
                   className="rounded-full border border-white/20 py-2.5 text-sm font-medium hover:bg-white/10 transition disabled:opacity-50">
-                  {loading==='annual' ? 'Loading…' : 'Annual — $50/yr'}
+                  {loading==='annual' ? 'Loading…' : 'Annual — $49/yr'}
                 </button>
               </div>
             </div>
@@ -156,14 +156,14 @@ export default function StudyBananaLandingPage() {
                 🔥 Limited Time Offer
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-black/30 mb-3">Lifetime</div>
-              <div className="text-4xl font-bold">$100</div>
+              <div className="text-4xl font-bold">$99</div>
               <div className="text-sm text-black/40 mt-1 mb-6">one-time · early bird only</div>
               <ul className="space-y-2 text-sm text-black/60 mb-8">
                 {['Everything in Premium','Pay once, use forever','All future updates','Priority support'].map(f=>(
                   <li key={f} className="flex gap-2"><span className="text-green-500">✓</span>{f}</li>
                 ))}
               </ul>
-              <button onClick={() => handleCheckout('price_1TFMWLCDDRCjONFZJ8M8MWDG','lifetime')} disabled={!!loading}
+              <button onClick={() => handleCheckout('price_1TFPBICDDRCjONFZd54Y5IQj','lifetime')} disabled={!!loading}
                 className="w-full rounded-full bg-[#2a241f] text-white py-2.5 text-sm font-bold hover:bg-black/80 transition disabled:opacity-50">
                 {loading==='lifetime' ? 'Loading…' : 'Get Lifetime Access'}
               </button>
