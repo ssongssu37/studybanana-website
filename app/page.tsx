@@ -160,7 +160,7 @@ export default function StudyBananaLandingPage() {
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-black/30 mb-3">Lifetime</div>
               <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-bold line-through text-red-500">$198</span>
+                <span className="text-4xl font-bold line-through text-red-500">$200</span>
                 <span className="text-4xl font-bold">$99</span>
               </div>
               <div className="text-sm text-black/40 mt-1 mb-6">one-time · early bird only</div>
