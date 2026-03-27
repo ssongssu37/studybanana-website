@@ -158,7 +158,7 @@ export default function StudyBananaLandingPage() {
               <div className="text-4xl font-bold">$0</div>
               <div className="text-sm text-black/40 mt-1 mb-6">forever</div>
               <ul className="space-y-2 text-sm text-black/60 mb-8">
-                {['Clock & Notes','Pomodoro timer','3 themes','Offline access'].map(f=>(
+                {['Clock & Notes','Pomodoro timer','3 themes','Offline access','Parental lock 🔒'].map(f=>(
                   <li key={f} className="flex gap-2"><span className="text-green-500">✓</span>{f}</li>
                 ))}
               </ul>
@@ -174,7 +174,7 @@ export default function StudyBananaLandingPage() {
               <div className="text-4xl font-bold">$5<span className="text-lg font-normal text-white/50">/mo</span></div>
               <div className="text-sm text-white/40 mt-1 mb-6">or $50/year — save $10</div>
               <ul className="space-y-2 text-sm text-white/70 mb-6">
-                {['Everything in Free','AI Study Helper','20 music tracks','Kids encyclopedia','All 10 themes','Parental lock 🔒'].map(f=>(
+                {['Everything in Free','AI Study Helper','20 music tracks','Kids encyclopedia','All 10 themes'].map(f=>(
                   <li key={f} className="flex gap-2"><span className="text-[#ffd54f]">✓</span>{f}</li>
                 ))}
               </ul>
@@ -193,7 +193,7 @@ export default function StudyBananaLandingPage() {
             {/* Lifetime */}
             <div className="rounded-2xl border-2 border-[#ffd54f] bg-white p-7 text-left shadow-sm relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-500 text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
-                🔥 {lifetimeLeft}/100 LEFT
+                🔥 Limited Time Offer
               </div>
               <div className="text-xs font-bold uppercase tracking-widest text-black/30 mb-3">Lifetime</div>
               <div className="text-4xl font-bold">$100</div>
@@ -203,9 +203,9 @@ export default function StudyBananaLandingPage() {
                   <li key={f} className="flex gap-2"><span className="text-green-500">✓</span>{f}</li>
                 ))}
               </ul>
-              <button onClick={() => handleCheckout('price_1TFMWLCDDRCjONFZJ8M8MWDG','lifetime')} disabled={!!loading || lifetimeLeft===0}
+              <button onClick={() => handleCheckout('price_1TFMWLCDDRCjONFZJ8M8MWDG','lifetime')} disabled={!!loading}
                 className="w-full rounded-full bg-[#2a241f] text-white py-2.5 text-sm font-bold hover:bg-black/80 transition disabled:opacity-50">
-                {lifetimeLeft===0 ? 'Sold Out' : loading==='lifetime' ? 'Loading…' : 'Get Lifetime Access'}
+                {loading==='lifetime' ? 'Loading…' : 'Get Lifetime Access'}
               </button>
             </div>
           </div>
