@@ -101,7 +101,7 @@ export default function StudyBananaLandingPage() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/60">
-          A focused study app for kids. Free to download on Mac and Windows.
+          A distraction-free focus app for the whole family. Free to download on Mac and Windows.
         </p>
 
         {/* Download buttons */}
