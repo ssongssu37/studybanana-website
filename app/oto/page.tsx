@@ -1,6 +1,7 @@
 'use client'
-import { useState, useEffect, Suspense } from 'react'
+import { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
+import LogoIcon from '@/components/LogoIcon'
 
 const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana-1.0.0.dmg'
 const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana.Setup.1.0.0.exe'
@@ -38,7 +39,7 @@ function OTOContent() {
       {/* Minimal nav */}
       <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
         <a href="/" className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffd54f] text-base">🍌</span>
+          <LogoIcon size={36} />
           <span className="text-base font-semibold tracking-tight">StudyBanana</span>
         </a>
       </nav>

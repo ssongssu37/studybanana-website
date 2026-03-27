@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
+import LogoIcon from '@/components/LogoIcon'
 
 type Feature = { icon: string; title: string; desc: string; highlight?: boolean }
 
@@ -68,7 +69,7 @@ export default function StudyBananaLandingPage() {
       {/* Navbar */}
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ffd54f] text-base">🍌</span>
+          <LogoIcon size={36} />
           <span className="text-base font-semibold tracking-tight">StudyBanana</span>
         </div>
         <div className="flex items-center gap-3">
@@ -360,7 +361,7 @@ export default function StudyBananaLandingPage() {
 
         {/* Bottom CTA */}
         <div className="mt-20 rounded-3xl bg-[#2a241f] px-8 py-14 text-white">
-          <div className="mb-3 text-3xl">🍌</div>
+          <div className="mb-3 flex justify-center"><LogoIcon size={48} /></div>
           <h2 className="text-3xl font-semibold tracking-tight">Give your kid a screen worth using.</h2>
           <p className="mx-auto mt-3 max-w-md text-base text-white/60">
             Download free today. Upgrade when you're ready. 30-day money-back guarantee.
@@ -382,7 +383,7 @@ export default function StudyBananaLandingPage() {
       {/* Footer */}
       <footer className="border-t border-black/8 py-8 text-center text-sm text-black/40">
         <div className="flex items-center justify-center gap-1.5">
-          <span className="text-base">🍌</span>
+          <LogoIcon size={20} />
           <span>StudyBanana · Free forever · Made with ❤️ for focused learners</span>
         </div>
       </footer>
