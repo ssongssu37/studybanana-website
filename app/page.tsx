@@ -101,11 +101,8 @@ export default function StudyBananaLandingPage() {
 
         {/* Screenshot in iMac frame */}
         <div className="mt-14 flex justify-center">
-          <div className="relative w-full max-w-3xl">
-            <img src="/appleTV.png" alt="iMac" className="w-full drop-shadow-2xl" />
-            <div className="absolute" style={{top:'3.5%',left:'7%',width:'86%',height:'71%',overflow:'hidden'}}>
-              <img src="/app-screenshot.png" alt="StudyBanana app" className="w-full h-full object-cover" />
-            </div>
+          <div className="w-full max-w-3xl">
+            <img src="/appleTV.png" alt="StudyBanana app on iMac" className="w-full drop-shadow-2xl" />
           </div>
         </div>
 
