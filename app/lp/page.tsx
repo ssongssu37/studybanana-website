@@ -2,8 +2,8 @@
 import { useState, useEffect } from 'react'
 import LogoIcon from '@/components/LogoIcon'
 
-const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.2.0/StudyBanana-1.0.9.dmg'
-const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.2.0/StudyBanana-1.0.9-win.zip'
+const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.3.0/StudyBanana-1.3.0.dmg'
+const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.3.0/StudyBanana-Setup-1.3.0.exe'
 const MONTHLY_PRICE_ID = 'price_1TFMWKCDDRCjONFZueHxhQtJ'
 
 const TOOLS = [
