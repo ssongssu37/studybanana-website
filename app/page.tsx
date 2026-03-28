@@ -149,7 +149,7 @@ export default function StudyBananaLandingPage() {
         <div className="mt-24" id="pricing">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">Pricing</p>
           <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">Your evenings back. Starting at $0.</h2>
-          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">Start free. Try premium free for 7 days — no charge until after the trial.</p>
+          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">Download free and use it as long as you want. Upgrade when you're ready.</p>
 
           {/* Monthly / Annual toggle */}
           <div className="mt-8 flex items-center justify-center gap-3">
@@ -205,7 +205,7 @@ export default function StudyBananaLandingPage() {
               )}
 
               <div className="mb-6 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-[#ffd54f]">
-                ✦ 7-day free trial — cancel anytime
+                ✦ Cancel anytime
               </div>
 
               <ul className="space-y-2 text-sm text-white/70 mb-6">
@@ -222,9 +222,9 @@ export default function StudyBananaLandingPage() {
                 disabled={!!loading}
                 className="w-full rounded-full bg-[#ffd54f] text-[#2a241f] py-3 text-sm font-bold hover:bg-yellow-300 transition disabled:opacity-50"
               >
-                {loading === 'monthly' || loading === 'annual' ? 'Loading…' : 'Start Free 7-Day Trial'}
+                {loading === 'monthly' || loading === 'annual' ? 'Loading…' : 'Upgrade to Premium'}
               </button>
-              <p className="mt-2 text-center text-xs text-white/30">No charge for 7 days. Cancel anytime.</p>
+              <p className="mt-2 text-center text-xs text-white/30">Cancel anytime.</p>
             </div>
 
             {/* Lifetime */}
@@ -364,7 +364,7 @@ export default function StudyBananaLandingPage() {
           <div className="mb-3 flex justify-center"><LogoIcon size={48} /></div>
           <h2 className="text-3xl font-semibold tracking-tight">Give your kid a screen worth using.</h2>
           <p className="mx-auto mt-3 max-w-md text-base text-white/60">
-            Download free today. Upgrade when you're ready. 30-day money-back guarantee.
+            Download free today. Use it as long as you want. Upgrade when you're ready.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <a href="/oto?platform=mac"
