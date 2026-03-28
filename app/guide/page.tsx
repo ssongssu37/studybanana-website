@@ -6,90 +6,94 @@ import Link from 'next/link'
 const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.2.0/StudyBanana-1.0.9.dmg'
 const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.2.0/StudyBanana-1.0.9-win.zip'
 
-const STAGES = [
+const STEPS = [
   {
-    number: '01',
-    title: 'Understand what immersion actually is',
-    body: [
-      'Most people picture deep focus as visible intensity. The child leans forward, brow furrowed, body stiff — pushing through. That posture looks like concentration. It is usually the opposite.',
-      'Psychologists have studied this for over a century. Beyond a moderate level of physiological arousal, performance declines. When stress rises, working memory shrinks, flexibility narrows, and complex thinking becomes mechanical. The child who appears to be grinding may be operating at a fraction of their capacity.',
-      'Immersion feels different. The body is relaxed. Breathing is steady. Attention narrows naturally — not forcefully. The mind isn\'t holding itself together. It is absorbed.',
-      'This is the state. Not intensity. Relaxed continuity. "Only me and the problem."',
+    n: '01',
+    title: 'Calm your nervous system first',
+    why: 'You cannot think your way into deep focus from a state of stress. Elevated anxiety measurably shrinks working memory — meaning a tense mind is a slower mind, even if it looks like it\'s trying harder.',
+    do: [
+      'Before you open anything, sit still for 60 seconds.',
+      'Put on calm music — ambient, lo-fi, or piano. Let it play before you start.',
+      'Close every unrelated tab and silence your phone. Do this now, not after you start.',
     ],
-    pull: 'Tension is not focus. It is focus\'s enemy.',
+    note: 'The session begins before you open your first book.',
   },
   {
-    number: '02',
-    title: 'Prepare the nervous system before you begin',
-    body: [
-      'You cannot think your way into immersion from a state of agitation. The nervous system must settle first.',
-      'This is not abstract. Research consistently shows that elevated stress reduces working memory performance by measurable amounts. A child anxious about a grade, tense from an argument, or overstimulated from a screen cannot enter immersion — not because they lack discipline, but because their cognitive architecture is temporarily impaired.',
-      'Before sitting down to study, the preparation matters: reduce background noise, transition away from fast stimulation, let the nervous system recalibrate. Calm music helps. Quiet helps. A brief pause between activities helps. Two minutes of decompression is not wasted time. It is the prerequisite.',
-      'Most study sessions fail in the thirty seconds before they start.',
+    n: '02',
+    title: 'Set a single intention',
+    why: 'The brain doesn\'t shift from reactive mode to reflective mode automatically. A small, deliberate act — naming what you\'re about to do — signals the transition. Without it, you drift into the task still half-distracted.',
+    do: [
+      'Write one sentence: what are you working on and what do you want to understand by the end?',
+      'Say it out loud if you can. It sounds odd. It works.',
+      'Don\'t start the timer until you\'ve done this.',
     ],
-    pull: 'Calm is not the reward for finishing. It is the precondition for beginning.',
+    note: 'Intention is the on-ramp. Don\'t skip it.',
   },
   {
-    number: '03',
-    title: 'Protect the first five minutes — structurally',
-    body: [
-      'The opening minutes of any focus session are neurologically unstable. The brain is shifting states — from reactive mode to reflective mode. During that transition, attention is fragile.',
-      'Research on task-switching shows that moving from a high-stimulation activity into a cognitively demanding one creates measurable "switch costs": slower reaction times, higher error rates, and reduced accuracy. Even a brief interruption during this entry phase — a notification, a question from across the room, a tab left open — can prevent immersion from forming at all.',
-      'If the first five minutes are fragmented, the session is likely already lost.',
-      'This is why the structure of the environment matters more than willpower. A full-screen interface that removes visual clutter. A closed door. Music that masks distraction. A device that doesn\'t notify. These are not preferences — they are the structural conditions that make the transition possible.',
-      'Protect entry. Everything else follows from there.',
+    n: '03',
+    title: 'Protect the first five minutes — completely',
+    why: 'The opening minutes of any session are neurologically unstable. The brain is switching states. Even one interruption during this window — a notification, a question, a tab — can prevent immersion from forming at all. Research calls this the "switch cost." It\'s real.',
+    do: [
+      'Go full-screen. Remove everything from view except the work.',
+      'Tell anyone nearby you\'re unavailable for the next 25 minutes.',
+      'Do not check anything. Not quickly. Not just once. Nothing.',
     ],
-    pull: 'The most important moment of a study session is the first five minutes. Most people don\'t protect them.',
+    note: 'If the first five minutes are fragmented, the whole session probably is.',
   },
   {
-    number: '04',
-    title: 'Move through the resistance — don\'t mistake it for inability',
-    body: [
-      'The first few minutes of effort frequently feel uncomfortable. Restless. Boring. The mind wanders. The task feels harder than it should.',
-      'This is not a sign that something is wrong. It is the transition.',
-      'Research on boredom shows that moderate periods of understimulation — the gap between external structure and internal direction — are the entry point for deeper engagement. The restlessness precedes initiative. The discomfort precedes absorption. Children who are rescued from this discomfort immediately, given stimulation or shorter tasks, never learn what comes after.',
-      'What comes after is immersion.',
-      'The practice is simply to remain. Stay with the task past the restlessness. Don\'t interpret difficulty as incapability. The nervous system is adjusting. In most cases, if you stay for eight to twelve minutes, the internal noise quiets. The problem begins to feel navigable. Attention settles.',
-      'This is the part that cannot be skipped. There is no shortcut through the doorway.',
+    n: '04',
+    title: 'Stay through the restlessness',
+    why: 'The first 8–12 minutes almost always feel uncomfortable. Boring. Too hard. Like you\'re not getting anywhere. This is not a sign something is wrong — it\'s the transition. The mind is adjusting from rapid-stimulation mode to sustained-thinking mode. Most people quit here.',
+    do: [
+      'When you feel the urge to switch — pause. Don\'t act on it.',
+      'Keep your eyes on the work. Read the next sentence. Write the next word.',
+      'Wait. The internal noise quiets. It always does.',
     ],
-    pull: 'Boredom is not the absence of immersion. It is the entrance.',
+    note: 'Boredom is not the absence of immersion. It\'s the entrance.',
   },
   {
-    number: '05',
-    title: 'Build the habit — not the willpower',
-    body: [
-      'Willpower is unreliable. It depletes across the day. It works against mood. It cannot be summoned on command.',
-      'Habits are different. Research on habit formation shows that behaviors repeated in consistent contexts become increasingly automatic — requiring less decision-making, less resistance, less conscious effort over time. In one widely cited study, habits formed over an average of 66 days of repetition. The behavior became effortless not because the person became stronger, but because the brain stopped having to decide.',
-      'Applied to attention: what a child repeatedly does in the first moments of discomfort — stays or switches — becomes their default. If they routinely switch to stimulation when focus becomes difficult, that becomes automatic. If they routinely remain, that becomes automatic.',
-      'The goal is not to build willpower. It is to build the system that makes willpower unnecessary.',
-      'Same time. Same space. Same entry ritual. Same structure. Repetition is the training. The practice is the compound interest. Pressure won\'t get you there. Consistent repetition will.',
+    n: '05',
+    title: 'Work in sessions, not marathons',
+    why: 'Mental endurance is built through cycles of focus and recovery — exactly like physical training. Performance declines steadily without breaks. A 25-minute focused session followed by a real break outperforms an hour of grinding every time.',
+    do: [
+      'Set a timer for 25 minutes. Work until it rings.',
+      'Take a genuine 5-minute break — stand up, look away from screens.',
+      'After 3 sessions, take a longer 15–20 minute break.',
     ],
-    pull: 'You don\'t need more discipline. You need a better system.',
+    note: 'The break is part of the training. Don\'t skip it.',
   },
   {
-    number: '06',
-    title: 'Recover deliberately — endurance is cycles, not constant exertion',
-    body: [
-      'Mental endurance is not built through continuous strain. It is built through cycles of activation and recovery — the same way physical endurance is built.',
-      'Research on sustained attention tasks shows that performance declines steadily without breaks. Brief rest intervals inserted between demanding sessions improve subsequent accuracy compared to uninterrupted conditions. A twenty-five minute session followed by a five-minute break outperforms forty-five minutes of grinding.',
-      'Sleep is the most powerful form of recovery. Large-scale developmental research involving over 11,000 children found that those sleeping fewer than nine hours showed significantly reduced working memory, executive function, and sustained attention the following day. Sleep is not downtime from focus training. It is the mechanism by which the gains from focus training are consolidated.',
-      'Quiet also functions as recovery. In noise-saturated environments, the nervous system rarely fully resets. Brief periods of silence — not sleep, just quiet — allow sensory systems to recalibrate.',
-      'Rest is not weakness. It is preparation for the next session.',
+    n: '06',
+    title: 'Handle blockers without leaving',
+    why: 'One of the most common reasons sessions end early: you hit something you don\'t understand, and solving it means opening a browser. Once you\'re in a browser, the session is over.',
+    do: [
+      'Use a built-in dictionary for unknown words. Don\'t Google.',
+      'Use an AI assistant for stuck moments — ask specifically, then close it.',
+      'Write a note about what you don\'t understand. Come back to it after the session.',
     ],
-    pull: 'The deepest thinkers don\'t outwork everyone. They recover better.',
+    note: 'Leaving the environment breaks the state. Stay inside it.',
   },
   {
-    number: '07',
-    title: 'Do it again tomorrow — duration is where depth lives',
-    body: [
-      'A single immersion session is valuable. Ten sessions begin to change the brain. A hundred sessions change the person.',
-      'Research on attention as a trainable capacity shows that sustained, structured practice — not intensity, not urgency — is the mechanism of improvement. Children exposed to stable daily rhythms and consistent work routines gradually show stronger executive functioning, better emotional regulation, and higher task persistence across years. These gains are not dramatic. They are incremental. And they compound.',
-      'The fifth session feels different from the first. The thirtieth feels different from the fifth. At some point, the discomfort of the entry phase shortens. Attention settles faster. The resistance softens.',
-      'This is not motivation. It is training. The nervous system has simply learned what comes after the discomfort. It begins to anticipate the absorption.',
-      'Deep focus is not a personality trait. It is not a gift. It is not something some people have and others lack. It is what happens when the right conditions are repeated consistently over time.',
-      'The future belongs to those who can remain. Not because they were born with the capacity — but because they practiced it.',
+    n: '07',
+    title: 'End with a recall attempt',
+    why: 'Passive reading creates the illusion of understanding. Active recall — trying to remember what you just learned without looking — is the actual mechanism that moves information into long-term memory. It takes 3 minutes and doubles retention.',
+    do: [
+      'Close your notes. Write down the 3 most important things from the session.',
+      'Try to answer: what did I actually learn? What would I explain to someone else?',
+      'It\'s okay if you can\'t remember everything. The attempt is the training.',
     ],
-    pull: 'Depth is not born. It is accumulated.',
+    note: 'Time spent is not the same as learning. Recall is.',
+  },
+  {
+    n: '08',
+    title: 'Recover before tomorrow',
+    why: 'Sleep is when the brain consolidates everything you practiced. Children sleeping under nine hours show measurably reduced working memory and attention the next day. This isn\'t about effort — it\'s about the biology of how focus is maintained and rebuilt.',
+    do: [
+      'No screens 30 minutes before bed. This is the single highest-impact change.',
+      'Same bedtime every night — consistency matters more than duration.',
+      'Think of sleep as tomorrow\'s session. Protect it like one.',
+    ],
+    note: 'The deepest thinkers don\'t outwork everyone. They recover better.',
   },
 ]
 
@@ -106,12 +110,12 @@ export default function GuidePage() {
   const downloadLabel = platform === 'win' ? 'Download for Windows' : 'Download for Mac'
 
   return (
-    <div style={{ background: '#0d0d0d', minHeight: '100vh', color: '#e8e0d0', fontFamily: 'Georgia, serif' }}>
+    <div style={{ background: '#0f0e0c', minHeight: '100vh', color: '#e8e0d0', fontFamily: 'Georgia, serif' }}>
 
       {/* Nav */}
       <nav style={{
         position: 'sticky', top: 0, zIndex: 100,
-        background: 'rgba(13,13,13,0.95)',
+        background: 'rgba(15,14,12,0.96)',
         backdropFilter: 'blur(12px)',
         borderBottom: '1px solid rgba(255,255,255,0.06)',
         padding: '0 clamp(20px,5vw,80px)',
@@ -123,192 +127,178 @@ export default function GuidePage() {
           <span style={{ fontFamily: 'Georgia, serif', fontSize: '15px', color: '#e8e0d0', letterSpacing: '0.5px' }}>StudyBanana</span>
         </Link>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          <Link href="/lp" style={{
-            fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: 'rgba(232,224,208,0.55)',
-            textDecoration: 'none', letterSpacing: '0.5px',
-          }}>The Science</Link>
+          <Link href="/lp" style={{ fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: 'rgba(232,224,208,0.45)', textDecoration: 'none' }}>The Science</Link>
           <a href={downloadUrl} style={{
             background: '#f5e070', color: '#1a1600',
             padding: '8px 18px', borderRadius: '6px',
             fontFamily: 'system-ui, sans-serif', fontSize: '13px', fontWeight: 700,
-            textDecoration: 'none', letterSpacing: '0.3px',
+            textDecoration: 'none',
           }}>Download Free</a>
         </div>
       </nav>
 
       {/* Hero */}
-      <div style={{ padding: 'clamp(60px,10vh,120px) clamp(20px,5vw,80px) clamp(40px,6vh,80px)', maxWidth: '780px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '680px', margin: '0 auto', padding: 'clamp(50px,8vh,90px) clamp(20px,5vw,48px) clamp(32px,5vh,60px)' }}>
         <p style={{
-          fontFamily: 'system-ui, sans-serif', fontSize: '12px', letterSpacing: '4px',
-          color: 'rgba(245,224,112,0.7)', textTransform: 'uppercase', marginBottom: '28px',
-        }}>A Guide to Deep Focus</p>
+          fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '4px',
+          color: 'rgba(245,224,112,0.6)', textTransform: 'uppercase', marginBottom: '20px',
+        }}>The Immersion Guide</p>
 
         <h1 style={{
-          fontSize: 'clamp(42px,6vw,72px)', fontWeight: 400, lineHeight: 1.08,
-          color: '#f0e8d8', marginBottom: '32px', letterSpacing: '-0.5px',
+          fontSize: 'clamp(36px,5.5vw,62px)', fontWeight: 400, lineHeight: 1.1,
+          color: '#f0e8d8', marginBottom: '24px', letterSpacing: '-0.3px',
         }}>
-          How to Immerse
+          8 steps to<br />deep focus
         </h1>
 
-        <p style={{
-          fontSize: 'clamp(17px,2vw,21px)', lineHeight: 1.75, color: 'rgba(232,224,208,0.72)',
-          maxWidth: '620px', fontStyle: 'italic',
-        }}>
-          Immersion is not a personality trait. It is not something some minds do naturally and others cannot. It is a state — specific, learnable, repeatable — and like any trained capacity, it responds to the right conditions.
-        </p>
-
-        <div style={{ margin: '48px 0', height: '1px', background: 'linear-gradient(to right, rgba(245,224,112,0.3), transparent)' }} />
-
-        <p style={{ fontSize: '18px', lineHeight: 1.8, color: 'rgba(232,224,208,0.65)' }}>
-          What follows is a practical framework drawn from the research behind StudyBanana. Not tips. Not hacks. The actual mechanics of how deep focus forms — and what consistently prevents it.
+        <p style={{ fontSize: 'clamp(15px,1.8vw,18px)', lineHeight: 1.75, color: 'rgba(232,224,208,0.6)', maxWidth: '520px', margin: 0 }}>
+          Immersion is a learnable state — not a personality trait. These steps take about 25 minutes to complete. Follow them in order.
         </p>
       </div>
 
-      {/* Stages */}
-      <div style={{ maxWidth: '780px', margin: '0 auto', padding: '0 clamp(20px,5vw,80px)' }}>
-        {STAGES.map((stage, i) => (
-          <div key={i} style={{
-            marginBottom: 'clamp(70px,10vh,110px)',
-            paddingTop: i > 0 ? 'clamp(70px,10vh,110px)' : 0,
-            borderTop: i > 0 ? '1px solid rgba(255,255,255,0.07)' : 'none',
-          }}>
-            {/* Stage number */}
-            <div style={{
-              fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '4px',
-              color: 'rgba(245,224,112,0.5)', textTransform: 'uppercase', marginBottom: '20px',
-            }}>
-              Stage {stage.number}
+      {/* Progress line */}
+      <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 clamp(20px,5vw,48px)' }}>
+        <div style={{ height: '1px', background: 'rgba(245,224,112,0.12)', marginBottom: 'clamp(40px,6vh,70px)' }} />
+      </div>
+
+      {/* Steps */}
+      <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 clamp(20px,5vw,48px)' }}>
+        {STEPS.map((step, i) => (
+          <div key={i} style={{ marginBottom: 'clamp(48px,7vh,80px)', display: 'flex', gap: 'clamp(20px,4vw,48px)' }}>
+
+            {/* Number column */}
+            <div style={{ flexShrink: 0, paddingTop: '4px' }}>
+              <div style={{
+                width: '44px', height: '44px', borderRadius: '50%',
+                border: '1px solid rgba(245,224,112,0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: 'system-ui, sans-serif', fontSize: '13px', fontWeight: 600,
+                color: 'rgba(245,224,112,0.6)', letterSpacing: '1px',
+              }}>
+                {step.n}
+              </div>
+              {i < STEPS.length - 1 && (
+                <div style={{
+                  width: '1px', height: 'clamp(48px,7vh,80px)',
+                  background: 'rgba(245,224,112,0.08)',
+                  margin: '12px auto 0',
+                }} />
+              )}
             </div>
 
-            {/* Title */}
-            <h2 style={{
-              fontSize: 'clamp(24px,3.5vw,38px)', fontWeight: 400, lineHeight: 1.2,
-              color: '#f0e8d8', marginBottom: '36px', letterSpacing: '-0.2px',
-            }}>
-              {stage.title}
-            </h2>
-
-            {/* Body paragraphs */}
-            {stage.body.map((para, j) => (
-              <p key={j} style={{
-                fontSize: 'clamp(16px,1.8vw,18px)', lineHeight: 1.85,
-                color: 'rgba(232,224,208,0.72)', marginBottom: '22px',
+            {/* Content column */}
+            <div style={{ flex: 1 }}>
+              <h2 style={{
+                fontSize: 'clamp(18px,2.5vw,24px)', fontWeight: 400, lineHeight: 1.2,
+                color: '#f0e8d8', marginBottom: '14px', letterSpacing: '-0.1px',
               }}>
-                {para}
-              </p>
-            ))}
+                {step.title}
+              </h2>
 
-            {/* Pull quote */}
-            <blockquote style={{
-              margin: '40px 0 0',
-              paddingLeft: '28px',
-              borderLeft: '2px solid rgba(245,224,112,0.35)',
-              fontStyle: 'italic',
-              fontSize: 'clamp(17px,2vw,20px)',
-              lineHeight: 1.65,
-              color: 'rgba(245,224,112,0.8)',
-            }}>
-              {stage.pull}
-            </blockquote>
+              <p style={{
+                fontSize: 'clamp(14px,1.6vw,16px)', lineHeight: 1.75,
+                color: 'rgba(232,224,208,0.55)', marginBottom: '20px',
+              }}>
+                {step.why}
+              </p>
+
+              {/* Do this box */}
+              <div style={{
+                background: 'rgba(245,224,112,0.04)',
+                border: '1px solid rgba(245,224,112,0.12)',
+                borderRadius: '8px',
+                padding: '18px 20px',
+                marginBottom: '14px',
+              }}>
+                <p style={{
+                  fontFamily: 'system-ui, sans-serif', fontSize: '10px', letterSpacing: '3px',
+                  color: 'rgba(245,224,112,0.45)', textTransform: 'uppercase', marginBottom: '12px',
+                }}>Do this</p>
+                {step.do.map((action, j) => (
+                  <div key={j} style={{ display: 'flex', gap: '12px', marginBottom: j < step.do.length - 1 ? '10px' : 0 }}>
+                    <span style={{ color: 'rgba(245,224,112,0.4)', fontSize: '14px', flexShrink: 0, marginTop: '1px' }}>→</span>
+                    <p style={{ fontSize: 'clamp(13px,1.5vw,15px)', lineHeight: 1.65, color: 'rgba(232,224,208,0.75)', margin: 0 }}>
+                      {action}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Note */}
+              <p style={{
+                fontFamily: 'system-ui, sans-serif', fontSize: '12px', lineHeight: 1.6,
+                color: 'rgba(245,224,112,0.45)', fontStyle: 'italic',
+              }}>
+                {step.note}
+              </p>
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Closing — The Environment is the Tool */}
+      {/* CTA section */}
       <div style={{
-        margin: 'clamp(60px,8vh,100px) auto 0',
-        padding: 'clamp(50px,8vh,90px) clamp(20px,5vw,80px)',
-        maxWidth: '780px',
-        borderTop: '1px solid rgba(255,255,255,0.07)',
+        maxWidth: '680px', margin: 'clamp(40px,6vh,70px) auto 0',
+        padding: '0 clamp(20px,5vw,48px)',
       }}>
-        <p style={{
-          fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '4px',
-          color: 'rgba(245,224,112,0.5)', textTransform: 'uppercase', marginBottom: '28px',
-        }}>The Environment Is the Tool</p>
-
-        <h2 style={{
-          fontSize: 'clamp(28px,4vw,46px)', fontWeight: 400, lineHeight: 1.15,
-          color: '#f0e8d8', marginBottom: '32px',
-        }}>
-          You cannot think your way into the right environment.<br />
-          You have to build it.
-        </h2>
-
-        <p style={{ fontSize: 'clamp(16px,1.8vw,18px)', lineHeight: 1.85, color: 'rgba(232,224,208,0.65)', marginBottom: '24px' }}>
-          Every principle in this guide — calm before starting, protecting entry, structural protection from distraction, consistent repetition, deliberate recovery — depends on the environment being arranged to support it.
-        </p>
-        <p style={{ fontSize: 'clamp(16px,1.8vw,18px)', lineHeight: 1.85, color: 'rgba(232,224,208,0.65)', marginBottom: '24px' }}>
-          StudyBanana was built around this research. Full-screen mode removes visual clutter at the moment the nervous system most needs simplicity. Calm music provides the physiological baseline immersion requires. The Pomodoro timer structures sessions and recovery in cycles that build endurance. The parental lock makes the commitment structural — the environment stays closed so the entry phase can complete. The AI assistant handles blockers before they break the session. The built-in dictionary, encyclopedia, and quiz keep the session alive without leaving the environment.
-        </p>
-        <p style={{ fontSize: 'clamp(16px,1.8vw,18px)', lineHeight: 1.85, color: 'rgba(232,224,208,0.65)', marginBottom: '40px' }}>
-          None of this replaces the practice. The repetition, the patience, the willingness to stay through the discomfort — that is still the student's work. But the environment determines whether the practice is even possible.
-        </p>
-
-        {/* Final quote */}
         <div style={{
-          background: 'linear-gradient(135deg, rgba(245,224,112,0.05) 0%, rgba(245,224,112,0.02) 100%)',
-          border: '1px solid rgba(245,224,112,0.15)',
-          borderRadius: '8px',
-          padding: 'clamp(28px,4vh,48px) clamp(24px,4vw,48px)',
-          marginBottom: '48px',
+          background: 'linear-gradient(135deg, rgba(245,224,112,0.06) 0%, rgba(245,224,112,0.02) 100%)',
+          border: '1px solid rgba(245,224,112,0.14)',
+          borderRadius: '12px',
+          padding: 'clamp(28px,5vh,48px) clamp(24px,4vw,40px)',
         }}>
           <p style={{
-            fontSize: 'clamp(19px,2.5vw,26px)', fontStyle: 'italic', lineHeight: 1.6,
-            color: 'rgba(245,224,112,0.85)', marginBottom: '16px',
-          }}>
-            "The future will belong to those who can remain."
-          </p>
-          <p style={{
-            fontFamily: 'system-ui, sans-serif', fontSize: '12px', letterSpacing: '2px',
-            color: 'rgba(245,224,112,0.4)', textTransform: 'uppercase',
-          }}>
-            — The Immersion Effect
-          </p>
-        </div>
+            fontFamily: 'system-ui, sans-serif', fontSize: '11px', letterSpacing: '4px',
+            color: 'rgba(245,224,112,0.5)', textTransform: 'uppercase', marginBottom: '18px',
+          }}>StudyBanana</p>
 
-        {/* CTA */}
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '16px' }}>
-          <a
-            href={downloadUrl}
-            style={{
+          <h2 style={{
+            fontSize: 'clamp(20px,3vw,30px)', fontWeight: 400, lineHeight: 1.25,
+            color: '#f0e8d8', marginBottom: '16px',
+          }}>
+            Every step in this guide is built into the app.
+          </h2>
+
+          <p style={{ fontSize: 'clamp(14px,1.6vw,16px)', lineHeight: 1.75, color: 'rgba(232,224,208,0.55)', marginBottom: '28px' }}>
+            Calm music to settle the nervous system. Full-screen mode that protects entry. A Pomodoro timer that structures sessions and recovery. A built-in AI, dictionary, and encyclopedia so you never have to leave. Active recall through quizzes. Parental lock to make the commitment structural.
+          </p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start' }}>
+            <a href={downloadUrl} style={{
               display: 'inline-block',
               background: '#f5e070', color: '#1a1600',
-              padding: '16px 36px', borderRadius: '8px',
-              fontFamily: 'system-ui, sans-serif', fontSize: '16px', fontWeight: 700,
-              textDecoration: 'none', letterSpacing: '0.3px',
-            }}
-          >
-            {downloadLabel} — Free
-          </a>
-          <p style={{
-            fontFamily: 'system-ui, sans-serif', fontSize: '13px',
-            color: 'rgba(232,224,208,0.35)', margin: 0,
-          }}>
-            Mac &amp; Windows · No account required to start
-          </p>
+              padding: '14px 30px', borderRadius: '8px',
+              fontFamily: 'system-ui, sans-serif', fontSize: '15px', fontWeight: 700,
+              textDecoration: 'none',
+            }}>
+              {downloadLabel} — Free
+            </a>
+            <p style={{ fontFamily: 'system-ui, sans-serif', fontSize: '12px', color: 'rgba(232,224,208,0.3)', margin: 0 }}>
+              Mac &amp; Windows · No account required
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Footer */}
       <footer style={{
-        borderTop: '1px solid rgba(255,255,255,0.06)',
-        padding: 'clamp(30px,5vh,50px) clamp(20px,5vw,80px)',
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        padding: 'clamp(28px,4vh,44px) clamp(20px,5vw,48px)',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         flexWrap: 'wrap', gap: '16px',
-        maxWidth: '1200px', margin: '60px auto 0',
+        maxWidth: '680px', margin: 'clamp(50px,7vh,80px) auto 0',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <LogoIcon size={24} />
-          <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: 'rgba(232,224,208,0.35)' }}>
-            © 2025 StudyBanana
-          </span>
+          <LogoIcon size={22} />
+          <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '12px', color: 'rgba(232,224,208,0.3)' }}>© 2025 StudyBanana</span>
         </div>
-        <div style={{ display: 'flex', gap: '24px' }}>
-          <Link href="/lp" style={{ fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: 'rgba(232,224,208,0.35)', textDecoration: 'none' }}>The Science</Link>
-          <Link href="/" style={{ fontFamily: 'system-ui, sans-serif', fontSize: '13px', color: 'rgba(232,224,208,0.35)', textDecoration: 'none' }}>Home</Link>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <Link href="/lp" style={{ fontFamily: 'system-ui, sans-serif', fontSize: '12px', color: 'rgba(232,224,208,0.3)', textDecoration: 'none' }}>The Science</Link>
+          <Link href="/" style={{ fontFamily: 'system-ui, sans-serif', fontSize: '12px', color: 'rgba(232,224,208,0.3)', textDecoration: 'none' }}>Home</Link>
         </div>
       </footer>
 
+      <div style={{ height: 'clamp(30px,5vh,60px)' }} />
     </div>
   )
 }
