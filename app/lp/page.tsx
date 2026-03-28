@@ -36,6 +36,26 @@ const TOOLS = [
     label: 'Writing as immersion practice',
     desc: 'Articulating a thought in writing requires staying with it longer than any other cognitive act. The multi-page notes editor turns assignments into an immersion exercise — not just task completion. The child learns to develop an idea, not just record it.',
   },
+  {
+    emoji: '💬',
+    label: 'Set intention before the session begins',
+    desc: 'The brain does not switch from reactive mode to reflective mode automatically. A daily rotating quote is not motivational decoration — it is the signal that something different is about to happen. That brief mental pivot, repeated daily, becomes part of how the child enters the immersion state.',
+  },
+  {
+    emoji: '📖',
+    label: 'Remove comprehension gaps before they break the session',
+    desc: 'When a child hits an unknown word mid-reading, they face a silent choice: skip it and lose meaning, or look it up and leave the environment. Both options damage the session. The built-in dictionary removes that choice. Comprehension stays intact. The state stays intact.',
+  },
+  {
+    emoji: '🎮',
+    label: 'Active recall — the mechanism that actually consolidates learning',
+    desc: 'Passive reading creates the illusion of understanding. Testing — even briefly — forces retrieval, which is the actual process by which information moves into long-term memory. The built-in trivia quiz turns the end of a study session into an act of genuine retention, not just time spent.',
+  },
+  {
+    emoji: '⌨️',
+    label: 'Build typing fluency so thinking can move faster than the keys',
+    desc: 'A child who types slowly spends working memory on the mechanical act of typing — memory that should be available for thought. The typing practice game builds automaticity deliberately. When the keystrokes become invisible, the ideas move forward unobstructed.',
+  },
 ]
 
 const REVIEWS = [
@@ -295,7 +315,7 @@ export default function LPPage() {
         </div>
 
         {/* Tools */}
-        <h3 className="text-xl font-bold text-[#111] mb-2 mt-2" style={{ fontFamily: 'system-ui, sans-serif' }}>Six design decisions — each one rooted in the science</h3>
+        <h3 className="text-xl font-bold text-[#111] mb-2 mt-2" style={{ fontFamily: 'system-ui, sans-serif' }}>Ten design decisions — each one rooted in the science</h3>
         <p className="text-sm text-[#888] mb-8" style={{ fontFamily: 'system-ui, sans-serif' }}>Every feature in StudyBanana exists because of a specific finding in attention, neuroscience, or habit research. Nothing is decoration.</p>
         <div className="space-y-0 mb-12">
           {TOOLS.map((t, i) => (
