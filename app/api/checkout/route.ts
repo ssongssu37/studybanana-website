@@ -4,6 +4,16 @@ import { supabaseAdmin } from '@/lib/supabase-admin'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
 
+const cors = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: cors })
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { priceId, email, userId } = await req.json()
@@ -43,8 +53,8 @@ export async function POST(req: NextRequest) {
     }
 
     const session = await stripe.checkout.sessions.create(sessionParams)
-    return NextResponse.json({ url: session.url })
+    return NextResponse.json({ url: session.url }, { headers: cors })
   } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 })
+    return NextResponse.json({ error: err.message }, { status: 500, headers: cors })
   }
 }
