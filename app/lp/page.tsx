@@ -6,12 +6,36 @@ const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/down
 const MONTHLY_PRICE_ID = 'price_1TFMWKCDDRCjONFZueHxhQtJ'
 
 const TOOLS = [
-  { emoji: '🎵', label: 'Focus Music', desc: '20 hand-picked tracks — ambient, lo-fi, jazz, piano. Calm input for a calm mind.' },
-  { emoji: '⏱️', label: 'Pomodoro Timer', desc: 'Structured focus blocks that build duration gradually — the exact mechanism the research describes.' },
-  { emoji: '🤖', label: 'AI Homework Help', desc: 'Any subject, any question — answered calmly, without leaving the environment.' },
-  { emoji: '📝', label: 'Notes Editor', desc: 'Multi-page workspace for sustained writing and thinking — no distractions.' },
-  { emoji: '📚', label: 'Kids Encyclopedia', desc: '64 topics across 8 subjects — curiosity fed inside the app, not through open browser tabs.' },
-  { emoji: '💬', label: 'Daily Quote', desc: 'One thought per day to anchor intention before the session begins.' },
+  {
+    emoji: '🎵',
+    label: 'Calm the nervous system first',
+    desc: 'Research cited in The Immersion Effect shows a 23% drop in working memory performance under stress. Tension doesn\'t sharpen focus — it shortens it. StudyBanana\'s 20 tracks of ambient, lo-fi, jazz, and piano music aren\'t background noise. They are the physiological condition the immersion state requires.',
+  },
+  {
+    emoji: '⏱️',
+    label: 'Build duration through repetition, not pressure',
+    desc: 'The book\'s research on habit formation shows attention endurance grows through consistent repetition — not intensity, not willpower. The built-in Pomodoro timer structures sessions that gradually extend. Twenty-five minutes is the starting point, not the ceiling. The timer is the training system.',
+  },
+  {
+    emoji: '🔒',
+    label: 'Protect the entry point — structurally',
+    desc: 'Chapter 12 of The Immersion Effect: the first five minutes determine depth. StudyBanana opens full-screen and stays full-screen. The parental PIN lock makes that commitment structural — the child cannot exit the environment on impulse. Environmental design replaces willpower.',
+  },
+  {
+    emoji: '🤖',
+    label: 'Remove the friction that breaks immersion',
+    desc: 'Frustration without resolution is one of the primary causes of session abandonment. When a child hits a genuine blocker and can\'t move forward, the session ends — and so does the practice. The built-in AI assistant handles the specific moments that would otherwise pull a child out of deep work. Not to make thinking easy. To keep the session alive.',
+  },
+  {
+    emoji: '📚',
+    label: 'Feed curiosity without fragmentation',
+    desc: 'Opening a browser to look something up ends the immersion session. Rabbit holes, notifications, and autoplay do the rest. StudyBanana\'s built-in encyclopedia — 64 topics across 8 subjects — keeps reference material inside the environment. Curiosity gets honored. The state stays intact.',
+  },
+  {
+    emoji: '📝',
+    label: 'Writing as immersion practice',
+    desc: 'Articulating a thought in writing requires staying with it longer than any other cognitive act. The multi-page notes editor turns assignments into an immersion exercise — not just task completion. The child learns to develop an idea, not just record it.',
+  },
 ]
 
 const REVIEWS = [
@@ -271,14 +295,16 @@ export default function LPPage() {
         </div>
 
         {/* Tools */}
+        <h3 className="text-xl font-bold text-[#111] mb-2 mt-2" style={{ fontFamily: 'system-ui, sans-serif' }}>Six design decisions — each one rooted in the science</h3>
+        <p className="text-sm text-[#888] mb-8" style={{ fontFamily: 'system-ui, sans-serif' }}>Every feature in StudyBanana exists because of a specific finding in attention, neuroscience, or habit research. Nothing is decoration.</p>
         <div className="space-y-0 mb-12">
           {TOOLS.map((t, i) => (
-            <div key={i} className={`py-6 flex gap-5 items-start ${i < TOOLS.length - 1 ? 'border-b border-black/8' : ''}`}>
+            <div key={i} className={`py-7 flex gap-5 items-start ${i < TOOLS.length - 1 ? 'border-b border-black/8' : ''}`}>
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#fffbf0] border border-[#ffd54f]/30 flex items-center justify-center text-2xl">
                 {t.emoji}
               </div>
               <div>
-                <h3 className="font-bold text-base text-[#111] mb-1" style={{ fontFamily: 'system-ui, sans-serif' }}>{t.label}</h3>
+                <h3 className="font-bold text-base text-[#111] mb-2" style={{ fontFamily: 'system-ui, sans-serif' }}>{t.label}</h3>
                 <p className="text-sm text-[#555] leading-relaxed" style={{ fontFamily: 'system-ui, sans-serif' }}>{t.desc}</p>
               </div>
             </div>
