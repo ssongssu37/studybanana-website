@@ -73,6 +73,7 @@ export default function StudyBananaLandingPage() {
           <span className="text-base font-semibold tracking-tight">StudyBanana</span>
         </div>
         <div className="flex items-center gap-3">
+          <a href="/guide" className="text-sm text-black/50 hover:text-black transition hidden sm:block">How to Immerse</a>
           <a href="/lp" className="rounded-full border border-[#2a241f] px-5 py-2 text-sm font-medium text-[#2a241f] transition hover:bg-[#2a241f] hover:text-white hidden sm:block">The Science</a>
           {user ? (
             <span className="text-sm text-black/50 hidden sm:block">{user.email}</span>
