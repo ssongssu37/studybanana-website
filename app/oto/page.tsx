@@ -3,8 +3,8 @@ import { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import LogoIcon from '@/components/LogoIcon'
 
-const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.7/StudyBanana-1.0.6.dmg'
-const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.7/StudyBanana-1.0.6-win.zip'
+const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.8/StudyBanana-1.0.6.dmg'
+const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.8/StudyBanana-1.0.6-win.zip'
 const MONTHLY_PRICE_ID = 'price_1TFMWKCDDRCjONFZueHxhQtJ'
 
 function OTOContent() {
