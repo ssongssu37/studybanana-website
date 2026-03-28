@@ -101,10 +101,10 @@ export default function LPPage() {
       {/* Sticky nav */}
       <div className="border-b border-black/10 bg-[#fafaf8]/95 backdrop-blur sticky top-0 z-20">
         <div className="max-w-2xl mx-auto px-5 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition">
             <LogoIcon size={32} />
             <span className="font-bold text-sm tracking-tight" style={{ fontFamily: 'system-ui, sans-serif' }}>StudyBanana</span>
-          </div>
+          </a>
           <a
             href={downloadUrl}
             className="rounded-full bg-[#ffd54f] text-[#1a1a1a] text-xs font-bold px-4 py-1.5 hover:bg-yellow-300 transition"
