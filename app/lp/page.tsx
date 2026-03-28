@@ -125,25 +125,26 @@ export default function LPPage() {
           If your child has a computer for homework, there's a good chance they're also watching YouTube, scrolling TikTok, or playing games between — and during — every assignment. StudyBanana is a distraction-free study app that runs on Mac and Windows and turns any computer into a focused, productive study station. Here's why parents are calling it the best $5 they've spent on their kids' education.
         </p>
 
-        {/* App visual */}
-        <div className="rounded-2xl bg-[#120e02] border border-black/10 mb-8 overflow-hidden shadow-xl">
-          <div className="px-6 py-8 text-center">
-            <div className="inline-block bg-[#1e1a10] rounded-xl px-8 py-6 border border-[#f5e070]/20">
-              <div className="text-[#f5e070] font-mono text-sm tracking-widest mb-3 opacity-60">STUDYBANANA</div>
-              <div className="text-[#f5e070] font-mono text-5xl font-bold mb-2" style={{textShadow:'0 0 20px rgba(245,224,112,0.5)'}}>
-                {new Date().toLocaleTimeString('en-US', {hour:'2-digit',minute:'2-digit'})}
-              </div>
-              <div className="text-[#f5e070] font-mono text-sm opacity-50 tracking-widest">
-                {new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}).toUpperCase()}
-              </div>
-              <div className="mt-4 flex gap-2 justify-center flex-wrap">
-                {['MUSIC','CLOCK','NOTES','ASK AI','POMODORO','WEATHER'].map(ch => (
-                  <span key={ch} className="bg-[#f5e070]/10 border border-[#f5e070]/20 text-[#f5e070]/60 text-xs font-mono px-2 py-0.5 rounded">{ch}</span>
-                ))}
-              </div>
-            </div>
-            <p className="text-[#f5e070]/40 text-xs font-mono mt-4 tracking-widest">RETRO · FOCUSED · DISTRACTION-FREE</p>
+        {/* App screenshots */}
+        <div className="mb-8 space-y-3">
+          <img
+            src="/ss-clock.png"
+            alt="StudyBanana clock channel with motivational quote"
+            className="w-full rounded-2xl shadow-xl border border-black/8"
+          />
+          <div className="grid grid-cols-2 gap-3">
+            <img
+              src="/ss-ai.png"
+              alt="StudyBanana AI homework helper"
+              className="w-full rounded-xl shadow-lg border border-black/8"
+            />
+            <img
+              src="/ss-visual.png"
+              alt="StudyBanana visual channel"
+              className="w-full rounded-xl shadow-lg border border-black/8"
+            />
           </div>
+          <p className="text-center text-xs text-[#aaa]">StudyBanana running on Mac — clock, AI assistant, and visual channels</p>
         </div>
 
         {/* The 6 reasons */}
