@@ -19,7 +19,7 @@ const TOOLS = [
   {
     emoji: '🔒',
     label: 'Protect the entry point — structurally',
-    desc: 'Chapter 12 of The Immersion Effect: the first five minutes determine depth. StudyBanana opens full-screen and stays full-screen. The parental PIN lock makes that commitment structural — the child cannot exit the environment on impulse. Environmental design replaces willpower.',
+    desc: 'Research on deep focus consistently shows the first five minutes determine whether immersion happens at all. StudyBanana opens full-screen and stays full-screen. The parental PIN lock makes that commitment structural — the child cannot exit the environment on impulse. Environmental design replaces willpower.',
   },
   {
     emoji: '🤖',
