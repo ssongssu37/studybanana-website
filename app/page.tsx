@@ -6,7 +6,7 @@ import LogoIcon from '@/components/LogoIcon'
 type Feature = { icon: string; title: string; desc: string; highlight?: boolean }
 
 const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.6/StudyBanana-1.0.6.dmg'
-const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.6/StudyBanana.Setup.1.0.6.exe'
+const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.6/StudyBanana-1.0.6-win.zip'
 
 export default function StudyBananaLandingPage() {
   const [user, setUser] = useState<any>(null)
@@ -122,7 +122,7 @@ export default function StudyBananaLandingPage() {
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3 12V6.75l6-1.32v6.57H3zM20 3v8.75h-8V4.82L20 3zM3 13h6v6.43l-6-1.29V13zm17 0v8.75l-8-1.43V13h8z"/>
             </svg>
-            Download for Windows
+            Download for Windows (.zip)
           </a>
         </div>
 
@@ -372,7 +372,7 @@ export default function StudyBananaLandingPage() {
             </a>
             <a href="/oto?platform=windows"
               className="rounded-full border border-white/20 px-7 py-3 text-base font-medium text-white transition hover:bg-white/10">
-              Download for Windows
+              Download for Windows (.zip)
             </a>
           </div>
           <p className="mt-4 text-sm text-white/30">Free · No account needed · Works offline</p>
