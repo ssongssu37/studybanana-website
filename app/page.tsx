@@ -5,8 +5,8 @@ import LogoIcon from '@/components/LogoIcon'
 
 type Feature = { icon: string; title: string; desc: string; highlight?: boolean }
 
-const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.1.0/StudyBanana-1.0.9.dmg'
-const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.1.0/StudyBanana-1.0.9-win.zip'
+const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.2.0/StudyBanana-1.0.9.dmg'
+const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.2.0/StudyBanana-1.0.9-win.zip'
 
 export default function StudyBananaLandingPage() {
   const [user, setUser] = useState<any>(null)
