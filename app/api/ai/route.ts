@@ -3,10 +3,20 @@ import { supabaseAdmin } from '@/lib/supabase-admin'
 
 const FREE_DAILY_LIMIT = 20
 
+const cors = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: cors })
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { messages, userId } = await req.json()
-    if (!messages?.length) return NextResponse.json({ error: 'No messages' }, { status: 400 })
+    if (!messages?.length) return NextResponse.json({ error: 'No messages' }, { status: 400, headers: cors })
 
     let isPremium = false
     let remaining = FREE_DAILY_LIMIT
@@ -31,7 +41,7 @@ export async function POST(req: NextRequest) {
             error: 'Daily limit reached. Upgrade to Premium for unlimited AI.',
             remaining: 0,
             limitReached: true,
-          }, { status: 429 })
+          }, { status: 429, headers: cors })
         }
 
         // Increment usage counter
@@ -60,12 +70,12 @@ export async function POST(req: NextRequest) {
     })
 
     const data = await groqRes.json()
-    if (data.error) return NextResponse.json({ error: data.error.message }, { status: 500 })
+    if (data.error) return NextResponse.json({ error: data.error.message }, { status: 500, headers: cors })
 
     const reply = data.choices?.[0]?.message?.content ?? 'No response received.'
-    return NextResponse.json({ reply, remaining: isPremium ? null : remaining })
+    return NextResponse.json({ reply, remaining: isPremium ? null : remaining }, { headers: cors })
 
   } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 })
+    return NextResponse.json({ error: err.message }, { status: 500, headers: cors })
   }
 }
