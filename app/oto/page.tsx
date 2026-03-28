@@ -3,9 +3,9 @@ import { useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import LogoIcon from '@/components/LogoIcon'
 
-const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana-1.0.0.dmg'
-const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.5/StudyBanana.Setup.1.0.0.exe'
-const ANNUAL_PRICE_ID = 'price_1TFPBECDDRCjONFZBZNEJGow'
+const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.6/StudyBanana-1.0.6.dmg'
+const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.0.6/StudyBanana.Setup.1.0.6.exe'
+const MONTHLY_PRICE_ID = 'price_1TFMWKCDDRCjONFZueHxhQtJ'
 
 function OTOContent() {
   const searchParams = useSearchParams()
@@ -21,7 +21,7 @@ function OTOContent() {
     const res = await fetch('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ priceId: ANNUAL_PRICE_ID, email: null, userId: null }),
+      body: JSON.stringify({ priceId: MONTHLY_PRICE_ID, email: null, userId: null }),
     })
     const data = await res.json()
     if (data.url) window.location.href = data.url
@@ -70,16 +70,16 @@ function OTOContent() {
           {/* Offer card */}
           <div className="mt-8 rounded-3xl bg-[#2a241f] text-white p-8 shadow-2xl text-left">
             <div className="flex items-center justify-between mb-1">
-              <span className="text-xs font-bold uppercase tracking-widest text-white/40">Premium — Annual</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-white/40">Premium — Monthly</span>
               <span className="rounded-full bg-green-500/20 text-green-300 text-xs font-bold px-3 py-1">7-Day Free Trial</span>
             </div>
 
             <div className="flex items-baseline gap-3 mt-3">
-              <span className="text-4xl font-bold line-through text-red-400 opacity-70">$98</span>
-              <span className="text-5xl font-bold">$49</span>
-              <span className="text-lg text-white/40">/year</span>
+              <span className="text-4xl font-bold line-through text-red-400 opacity-70">$10</span>
+              <span className="text-5xl font-bold">$5</span>
+              <span className="text-lg text-white/40">/month</span>
             </div>
-            <p className="text-sm text-white/40 mt-1 mb-6">That's $4.08/month. Try free for 7 days — no charge until after trial.</p>
+            <p className="text-sm text-white/40 mt-1 mb-6">Try free for 7 days — no charge until after the trial. Cancel anytime.</p>
 
             <div className="grid grid-cols-2 gap-2 mb-8">
               {[
@@ -114,14 +114,14 @@ function OTOContent() {
             <button
               onClick={handleDecline}
               disabled={declining}
-              className="text-sm text-black/40 hover:text-black/60 transition underline underline-offset-2"
+              className="w-full rounded-full border border-black/15 py-3 text-sm font-medium text-black/60 hover:bg-black/5 transition"
             >
-              {declining ? 'Starting download…' : `No thanks, just download the free version for ${platformLabel} →`}
+              {declining ? 'Starting download…' : `↓ No thanks — download the free version for ${platformLabel}`}
             </button>
           </div>
 
-          <p className="mt-4 text-xs text-black/30">
-            Free version includes: Clock, Notes, Weather, Pomodoro, 3 music tracks, 20 AI questions/day, Parental lock
+          <p className="mt-3 text-xs text-black/30">
+            Free includes: Clock, Notes, Weather, Pomodoro, 3 music tracks, 20 AI questions/day, Parental lock
           </p>
         </div>
       </main>
