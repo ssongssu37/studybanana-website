@@ -47,7 +47,7 @@ const TOOLS = [
     desc: 'When a child hits an unknown word mid-reading, they face a silent choice: skip it and lose meaning, or look it up and leave the environment. Both options damage the session. The built-in dictionary removes that choice. Comprehension stays intact. The state stays intact.',
   },
   {
-    emoji: '🎮',
+    emoji: '🧠',
     label: 'Active recall — the mechanism that actually consolidates learning',
     desc: 'Passive reading creates the illusion of understanding. Testing — even briefly — forces retrieval, which is the actual process by which information moves into long-term memory. The built-in trivia quiz turns the end of a study session into an act of genuine retention, not just time spent.',
   },
