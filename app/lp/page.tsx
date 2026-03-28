@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import LogoIcon from '@/components/LogoIcon'
 
 const MAC_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.1.0/StudyBanana-1.0.9.dmg'
 const WIN_URL = 'https://github.com/ssongssu37/studybanana-website/releases/download/v1.1.0/StudyBanana-1.0.9-win.zip'
@@ -101,7 +102,7 @@ export default function LPPage() {
       <div className="border-b border-black/10 bg-[#fafaf8]/95 backdrop-blur sticky top-0 z-20">
         <div className="max-w-2xl mx-auto px-5 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🍌</span>
+            <LogoIcon size={32} />
             <span className="font-bold text-sm tracking-tight" style={{ fontFamily: 'system-ui, sans-serif' }}>StudyBanana</span>
           </div>
           <a
