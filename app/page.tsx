@@ -382,9 +382,12 @@ export default function StudyBananaLandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-black/8 py-8 text-center text-sm text-black/40">
-        <div className="flex items-center justify-center gap-1.5">
+        <div className="flex items-center justify-center gap-1.5 mb-2">
           <LogoIcon size={20} />
           <span>StudyBanana · Free forever · Made with ❤️ for focused learners</span>
+        </div>
+        <div>
+          <a href="mailto:info@studybanana.com" className="text-black/40 hover:text-black/70 transition">info@studybanana.com</a>
         </div>
       </footer>
     </div>
