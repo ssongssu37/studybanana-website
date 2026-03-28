@@ -94,16 +94,15 @@ export default function StudyBananaLandingPage() {
         </div>
 
         <h1 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
-          One screen. Study mode.{' '}
+          The same brain that learned to scroll.{' '}
           <span className="relative inline-block">
-            <span className="relative z-10">Homework done.</span>
+            <span className="relative z-10">Can learn to stay.</span>
             <span className="absolute inset-x-0 bottom-1 z-0 h-3 rounded bg-[#ffd54f]/60" />
-          </span>{' '}
-          Evenings back.
+          </span>
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-black/60">
-          A distraction-free focus app for the whole family. Free to download on Mac and Windows.
+          StudyBanana is designed for depth, not distraction. One screen. Kids who focus. Families who breathe.
         </p>
 
         {/* Download buttons */}
