@@ -75,6 +75,7 @@ export default function StudyBananaLandingPage() {
         <div className="flex items-center gap-3">
           <a href="/guide" className="text-sm text-black/50 hover:text-black transition hidden sm:block">How to Immerse</a>
           <a href="/lp" className="text-sm text-black/50 hover:text-black transition hidden sm:block">The Science</a>
+          <a href="/preview.html" className="text-sm text-black/50 hover:text-black transition hidden sm:block">Try Preview</a>
           {user ? (
             <span className="text-sm text-black/50 hidden sm:block">{user.email}</span>
           ) : (
@@ -126,6 +127,13 @@ export default function StudyBananaLandingPage() {
             Download for Windows (.zip)
           </a>
         </div>
+
+        <p className="mt-3 text-sm text-black/40">
+          Not ready to download?{' '}
+          <a href="/preview.html" className="underline underline-offset-2 text-black/60 hover:text-black transition">
+            Try the web preview →
+          </a>
+        </p>
 
         {/* Credibility proof */}
         <div className="mt-5 flex flex-col items-center gap-2">
