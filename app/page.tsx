@@ -76,6 +76,7 @@ export default function StudyBananaLandingPage() {
           <a href="/guide" className="text-sm text-black/50 hover:text-black transition hidden sm:block">How to Immerse</a>
           <a href="/lp" className="text-sm text-black/50 hover:text-black transition hidden sm:block">The Science</a>
           <a href="/preview.html" className="text-sm text-black/50 hover:text-black transition hidden sm:block">Try Preview</a>
+          <a href="/vs" className="text-sm text-black/50 hover:text-black transition hidden sm:block">Compare Apps</a>
           {user ? (
             <span className="text-sm text-black/50 hidden sm:block">{user.email}</span>
           ) : (
@@ -150,6 +151,25 @@ export default function StudyBananaLandingPage() {
         <div className="mt-14 flex justify-center">
           <div className="w-full max-w-3xl">
             <img src="/appleTV.png" alt="StudyBanana app on iMac" className="w-full drop-shadow-2xl" />
+          </div>
+        </div>
+
+        {/* Compare Apps */}
+        <div className="mt-24">
+          <p className="text-sm font-semibold uppercase tracking-widest text-[#7a5c00]">How We Compare</p>
+          <h2 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">See how StudyBanana stacks up</h2>
+          <p className="mx-auto mt-3 max-w-xl text-base text-black/55">Wondering how we compare to Forest, Cold Turkey, or Freedom? We made honest comparison pages.</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {[
+              { href: '/vs/forest',      label: '🌳 vs Forest App' },
+              { href: '/vs/cold-turkey', label: '🦃 vs Cold Turkey' },
+              { href: '/vs/freedom',     label: '🔓 vs Freedom' },
+              { href: '/vs/be-focused',  label: '⏱️ vs Be Focused' },
+            ].map(({ href, label }) => (
+              <a key={href} href={href} className="rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm font-medium text-[#2a241f] shadow-sm hover:bg-black/[0.03] hover:-translate-y-0.5 transition-all">
+                {label}
+              </a>
+            ))}
           </div>
         </div>
 
